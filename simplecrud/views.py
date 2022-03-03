@@ -12,6 +12,7 @@ class ProductAPI(ListAPIView):
 
     def get(self,request):
         try:
+            
             # name = self.request.GET.get("name","default_name")
             # # name = self.request.GET['name']
             id = self.request.GET.get("id","")
