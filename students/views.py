@@ -96,15 +96,16 @@ class StudentAPI(ListAPIView):
         name = self.request.POST.get("name","")
         phone = self.request.POST.get("phone","")
         
-        physics = self.request.POST.get("physics",0)
-        chemistry = self.request.POST.get("chemistry",0)
-        Maths = self.request.POST.get("Maths",0)
-        Botany = self.request.POST.get("Botany",0)
-        Zoology = self.request.POST.get("Zoology",0)
-        English = self.request.POST.get("English",0)
+        physics = self.request.POST.get("physics","")
+        chemistry = self.request.POST.get("chemistry","")
+        Maths = self.request.POST.get("Maths","")
+        Botany = self.request.POST.get("Botany","")
+        Zoology = self.request.POST.get("Zoology","")
+        English = self.request.POST.get("English","")
+
         Total = int(physics) + int(chemistry) + int(Maths) + int(Botany) + int(Zoology) + int(English)
 
-        if id == "" or name == "" or phone == "" or physics == 0 or chemistry == 0 or Maths == 0 or Botany == 0 or Zoology == 0 or English == 0:
+        if id == "" or name == "" or phone == "" or physics == "" or chemistry == "" or Maths == "" or Botany == "" or Zoology == "" or English == "":
             return Response({
                 "status" : False,
                 "Message" :  "PLease Fill Your All Field"
@@ -151,27 +152,3 @@ class StudentAPI(ListAPIView):
             "Status":True,
             "Message":"data Deleted "
         })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# {
-#     "name" : "Raju",
-#     "phone" : "123456789",
-#     "physics" : 50,
-#     "chemistry" : 40,
-#     "Maths" : 90,
-#     "Botany" : 34,
-#     "Zoology" : 45,
-#     "English" : 49
-# }
