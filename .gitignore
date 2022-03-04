@@ -2,4 +2,5 @@
 
 # dependencies
 /venv
+/env
 /.idea

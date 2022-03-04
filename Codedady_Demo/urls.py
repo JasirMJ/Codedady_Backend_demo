@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path
 
 from simplecrud.views import ProductAPI
+from students.views import StudentAPI
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('products/',ProductAPI.as_view())
+    path('products/',ProductAPI.as_view()),
+    path('students/',StudentAPI.as_view()),
 ]
