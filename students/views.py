@@ -39,9 +39,29 @@ class StudentAPI(ListAPIView):
         id = self.request.POST.get("id","")
 
         if id == "":
+            data = []
+            st_obj = student.objects.all()
+            mark_obj = Marks.objects.all()
+            data = []
+            for (x,y) in zip(st_obj,mark_obj):
+                data.append(
+                    {
+                        'id':x.id,
+                        'name':x.name,
+                        'phone':x.phone,
+                        "physics" : y.physics,
+                        "chemistry" : y.chemistry,
+                        "Maths" : y.Maths,
+                        "Botany" : y.Botany,
+                        "Zoology" : y.Zoology,
+                        "English" : y.English,
+                        "Total" : y.Total
+                    }
+            )
             return Response({
-                "status" : False,
-                "Message" :  "PLease Fill Your Id"
+
+                "status" : True,
+                "Your Result" :  data
             })
         
         else:
