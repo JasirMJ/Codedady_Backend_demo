@@ -13,10 +13,10 @@ def Checking(data):
         Zoology = data["Zoology"]
         English = data["English"]
         Semester = data["semester"]
-        
+
         return True
-    except Exception as e:
-       
+
+    except Exception as e:       
         return e
 
     

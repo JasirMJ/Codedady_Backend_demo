@@ -179,10 +179,7 @@ class StudentAPI(ListAPIView):
         datas = Marks.objects.filter(student_id = id).filter(Semester=Semester)
         for x in datas:
             sem.append(x.Semester)
-
-        print(sem)
-
-       
+                  
         if id == "" or name == "" or phone == "" or physics == "" or chemistry == "" or Maths == "" or Botany == "" or Zoology == "" or English == "" or Semester == "":
             return Response({
                 "status" : False,
@@ -218,9 +215,7 @@ class StudentAPI(ListAPIView):
                 "status" : True,
                 "Message" : "Data Saved Succesfully"
             })
-
-      
-        
+       
     def delete(self,request):
 
         id= self.request.POST.get('id',"")
@@ -253,6 +248,3 @@ class StudentAPI(ListAPIView):
                 "Status":True,
                 "Message":"data Deleted "
             })
-
-
-
