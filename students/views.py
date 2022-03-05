@@ -1,8 +1,4 @@
-from operator import le
-from pickle import TRUE
-from django.shortcuts import render
 from rest_framework.generics import ListAPIView
-from rest_framework.decorators import APIView
 from rest_framework.response import Response
 from .models import *
 from .Checking_Fun import Checking
@@ -85,88 +81,83 @@ class StudentAPI(ListAPIView):
 
         id = self.request.POST.get("id","")
         
-        if id == "":
-            data = []
+        stdts = []
+        if id != "":
+            stids=student.objects.filter(id = id)
+            for x in stids:
+                stdts.append(x.id)    
+        else:
+            pass
+
+        if id == "":          
+           
             st_obj = student.objects.all()
             mark_obj = Marks.objects.all()
             data = []
-            # for x in st_obj:            
-            #     ids = x.id
-            #     for y in mark_obj:                    
-            #         if y.student_id == ids:
-            #             data.append({
-            #                 'name' : x.name,
-            #                 'id'  : x.id,
-            #                 'Subjects' : [
-            #                     {
-            #                         'Semester' : y.Semester
-            #                     }
-            #                 ]
-            #             }) 
-                       
+            sub = []
+          
+            for x in st_obj:
+                sub = []
+                id = x.id
+                data.append({
+                    'name' : x.name,
+                    'id'  : x.id,
+                    'Phone' : x.phone,
+                    'Subject' : sub
+                })
+                for y in mark_obj:
+                    if y.student_id == id:
+                        sub.append({
+                            'physics' : y.physics,
+                            'chemistry' : y.chemistry,
+                            'Maths' : y.Maths,
+                            'Botany' : y.Botany,
+                            'Zoology' : y.Zoology,
+                            'English' : y.English,
+                            'Total' : y.Total,
+                            'Semester ' : y.Semester
+                        })
+            
             return Response({
-                
-                "Status" : True,
-                "Result" : data
-            }) 
+                'status' : True,
+                'Result Data' : data
+            })     
+        elif len(stdts) == 0:
+            return Response({
+                'status' : False,
+                "Message" : "The Stdent ID Does Not Exist "
+            })           
         else:
+            st_obj = student.objects.filter(id = id)
+            mark_obj = Marks.objects.filter(student_id = id)
+            data = []
+            sub = []
+            for x in st_obj:
+                sub = []
+                id = x.id
+                data.append({
+                    'name' : x.name,
+                    'id'  : x.id,
+                    'Phone' : x.phone,
+                    'Subject' : sub
+                })
+                for y in mark_obj:
+                    if y.student_id == id:
+                        sub.append({
+                            'physics' : y.physics,
+                            'chemistry' : y.chemistry,
+                            'Maths' : y.Maths,
+                            'Botany' : y.Botany,
+                            'Zoology' : y.Zoology,
+                            'English' : y.English,
+                            'Total' : y.Total,
+                            'Semester ' : y.Semester
+                        })
             return Response({
-                "Status" : False
-            }) 
-
-        # if id == "":
-        #     data = []
-        #     st_obj = student.objects.all()
-        #     mark_obj = Marks.objects.all()
-        #     data = []
-        #     for (x,y) in zip(st_obj,mark_obj):
-        #         data.append({
-        #             'id' : x.id,
-        #             'name' : x.name,
-        #             'phone':x.phone,
-        #             'Marks' : [{
-
-        #                 "physics" : y.physics,
-        #                 "chemistry" : y.chemistry,
-        #                 "Maths" : y.Maths,
-        #                 "Botany" : y.Botany,
-        #                 "Zoology" : y.Zoology,
-        #                 "English" : y.English,
-        #                 "Total" : y.Total
-        #             }]
-        #         })
-        #     return Response({
-
-        #         "status" : True,
-        #         "Your Result" :  data
-        #     })
-        
-        # else:
-        #     data = []
-        #     st_obj = student.objects.filter(id = id)
-        #     mark_obj = Marks.objects.filter(student_id = id)
-        #     for (x,y) in zip(st_obj,mark_obj):
-        #         data.append({
-        #             'id' : x.id,
-        #             'name' : x.name,
-        #             'phone':x.phone,
-        #             'Marks' : [{
-                        
-        #                 "physics" : y.physics,
-        #                 "chemistry" : y.chemistry,
-        #                 "Maths" : y.Maths,
-        #                 "Botany" : y.Botany,
-        #                 "Zoology" : y.Zoology,
-        #                 "English" : y.English,
-        #                 "Total" : y.Total
-        #             }]
-        #         })
-
-        #     return Response({
-        #         "status" : True,
-        #         "Your Data" : data
-        #     })
-
+                'status' : True,
+                'Data' : data
+            })
+    
     def put(self,request):
         
         id = self.request.POST.get("id","")
