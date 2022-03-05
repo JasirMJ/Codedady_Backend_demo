@@ -16,3 +16,4 @@ class Marks(models.Model):
     Zoology = models.CharField(max_length=100)
     English = models.CharField(max_length=100)
     Total = models.CharField(max_length=100)
+    Semester = models.CharField(max_length=100,default='1')
