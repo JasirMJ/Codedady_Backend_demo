@@ -1,11 +1,23 @@
-from asyncio.windows_events import NULL
-
-
+from rest_framework.response import Response
+from .models import *
 def Checking(data):
+    
     try:
-        if data['id'] == "" or data['name'] == "" or data["phone"] == "" or data["physics"] == "" or data["chemistry"] == "" or data["Maths"] == "" or data["Botany"] == "" or data["Zoology"] == "" or data["English"] == "" :
-            return False
-    except:
-        return NULL
-    # print(data['id'])
+        st_id = data["id"]
+        name = data["name"]
+        phone = data["phone"]        
+        physics = data["physics"]
+        chemistry = data["chemistry"]
+        Maths = data["Maths"]
+        Botany = data["Botany"]
+        Zoology = data["Zoology"]
+        English = data["English"]
+        Semester = data["semester"]
+        
+        return True
+    except Exception as e:
+       
+        return e
+
+    
 

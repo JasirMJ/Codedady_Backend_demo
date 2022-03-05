@@ -21,9 +21,7 @@ class StudentAPI(ListAPIView):
         Semester = self.request.POST.get("semester","")
 
         Total = int(physics) + int(chemistry) + int(Maths) + int(Botany) + int(Zoology) + int(English)
-
-
-       
+   
         if st_id == "":
             if name == "":
                 return Response({
@@ -76,7 +74,7 @@ class StudentAPI(ListAPIView):
                         "Message" : "Succesfully Created Semester Mark"
                     })
 
-
+    
     def get(self,request):
 
         id = self.request.POST.get("id","")
@@ -226,11 +224,23 @@ class StudentAPI(ListAPIView):
     def delete(self,request):
 
         id= self.request.POST.get('id',"")
+        stdts = []
+        if id != "":
+            stids=student.objects.filter(id = id)
+            for x in stids:
+                stdts.append(x.id)    
+        else:
+            pass
 
         if id == "":
             return Response({
                 "status" : False,
                 "Message" :  "PLease Fill Your Id"
+            })
+        elif len(stdts) == 0:
+            return Response({
+                "status" : False,
+                "Message" : "The User With This ID Does Not Exist"
             })
         else:
             st_obj = student.objects.filter(id=id)
@@ -239,10 +249,10 @@ class StudentAPI(ListAPIView):
             st_obj.delete()
             Mark_obj.delete()
 
-        return Response({
-            "Status":True,
-            "Message":"data Deleted "
-        })
+            return Response({
+                "Status":True,
+                "Message":"data Deleted "
+            })
 
 
 

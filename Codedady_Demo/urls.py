@@ -18,11 +18,11 @@ from django.urls import path
 
 from simplecrud.views import ProductAPI
 from students.views import StudentAPI
-from studentstwo.views import  StudentAPITwo
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('products/',ProductAPI.as_view()),
     path('students/',StudentAPI.as_view()),
-    path('studentsnew/',StudentAPITwo.as_view()),
+
 ]
