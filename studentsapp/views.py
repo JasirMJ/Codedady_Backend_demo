@@ -232,14 +232,20 @@ class StudentAPI(ListAPIView):
     def delete(self,request):
         try:
             id=request.POST.get("id")
-            stu_obj=StudentModel.objects.get(id=id)
-            sub_obj=SubjectModel.objects.get(stu_id=id)
-            stu_obj.delete()
-            sub_obj.delete()
-            return Response({
-                "status":True,
-                "message":"deleted successfully",
-            })
+            if id:
+                stu_obj=StudentModel.objects.get(id=id)
+                sub_obj=SubjectModel.objects.get(stu_id=id)
+                stu_obj.delete()
+                sub_obj.delete()
+                return Response({
+                    "status":True,
+                    "message":"deleted successfully",
+                })
+            else:
+                return Response({
+                    "status":False,
+                    "message":"invalid id",
+                })
 
         except Exception as e:
             msg = "Excepction occured "+str(e)
@@ -372,7 +378,8 @@ class SubjectAPI(ListAPIView):
                     })
             return Response({
                 "Status":False,
-                "subject":data,
+                "message":"invalid",
+                "list contains":data,
             })
        
     def put(self,request): 
@@ -434,23 +441,31 @@ class SubjectAPI(ListAPIView):
                 "message":data,
             })
     def delete(self,request):
-        try:
-            id=request.POST.get("id")
-            subject=request.POST.get("subject")
-            # stu_obj=StudentModel.objects.get(id=id)
-            sub_obj=SubjectModel.objects.get(stu_id=id,subject=subject)
-            # stu_obj.delete()
-            sub_obj.delete()
-            return Response({
-                "status":True,
-                "message":"deleted successfully",
-            })
+        mandatory=['id','subject']
+        data=Checking(self.request.data,mandatory)
+        if data==True:
+            try:
+                id=request.POST.get("id")
+                subject=request.POST.get("subject")
+                # stu_obj=StudentModel.objects.get(id=id)
+                sub_obj=SubjectModel.objects.get(stu_id=id,subject=subject)
+                # stu_obj.delete()
+                sub_obj.delete()
+                return Response({
+                    "status":True,
+                    "message":"deleted successfully",
+                })
 
-        except Exception as e:
-            msg = "Excepction occured "+str(e)
+            except Exception as e:
+                msg = "Excepction occured "+str(e)
+                return Response({
+                    "Status":False,
+                    "Message":msg,
+                })
+        else:
             return Response({
-                "Status":False,
-                "Message":msg,
+                "status":False,
+                "message":data,
             })
 
        
