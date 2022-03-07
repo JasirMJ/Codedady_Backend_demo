@@ -1,0 +1,647 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "ProductAPI",
+        "importPath": "simplecrud.views",
+        "description": "simplecrud.views",
+        "isExtraImport": true,
+        "detail": "simplecrud.views",
+        "documentation": {}
+    },
+    {
+        "label": "StudentAPI",
+        "importPath": "studentsapp.views",
+        "description": "studentsapp.views",
+        "isExtraImport": true,
+        "detail": "studentsapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "SubjectAPI",
+        "importPath": "studentsapp.views",
+        "description": "studentsapp.views",
+        "isExtraImport": true,
+        "detail": "studentsapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "studentsapp.models",
+        "description": "studentsapp.models",
+        "isExtraImport": true,
+        "detail": "studentsapp.models",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "ListAPIView",
+        "importPath": "rest_framework.generics",
+        "description": "rest_framework.generics",
+        "isExtraImport": true,
+        "detail": "rest_framework.generics",
+        "documentation": {}
+    },
+    {
+        "label": "ListAPIView",
+        "importPath": "rest_framework.generics",
+        "description": "rest_framework.generics",
+        "isExtraImport": true,
+        "detail": "rest_framework.generics",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "ProductsModel",
+        "importPath": "simplecrud.models",
+        "description": "simplecrud.models",
+        "isExtraImport": true,
+        "detail": "simplecrud.models",
+        "documentation": {}
+    },
+    {
+        "label": "default",
+        "importPath": "email.policy",
+        "description": "email.policy",
+        "isExtraImport": true,
+        "detail": "email.policy",
+        "documentation": {}
+    },
+    {
+        "label": "Empty",
+        "importPath": "queue",
+        "description": "queue",
+        "isExtraImport": true,
+        "detail": "queue",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "name",
+        "importPath": "unicodedata",
+        "description": "unicodedata",
+        "isExtraImport": true,
+        "detail": "unicodedata",
+        "documentation": {}
+    },
+    {
+        "label": "response",
+        "importPath": "urllib",
+        "description": "urllib",
+        "isExtraImport": true,
+        "detail": "urllib",
+        "documentation": {}
+    },
+    {
+        "label": "Checking",
+        "importPath": "studentsapp.checking",
+        "description": "studentsapp.checking",
+        "isExtraImport": true,
+        "detail": "studentsapp.checking",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "Codedady_Demo.asgi",
+        "description": "Codedady_Demo.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "Codedady_Demo.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "Codedady_Demo.settings",
+        "description": "Codedady_Demo.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# print(\"BASE_DIR \",BASE_DIR)\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-m2xn9_w@-(11si0%a$+95xbpiy7o!z=57&67_p4a)sac2(dv**'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition",
+        "detail": "Codedady_Demo.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "Codedady_Demo.settings",
+        "description": "Codedady_Demo.settings",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-m2xn9_w@-(11si0%a$+95xbpiy7o!z=57&67_p4a)sac2(dv**'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "detail": "Codedady_Demo.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "Codedady_Demo.settings",
+        "description": "Codedady_Demo.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "Codedady_Demo.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "Codedady_Demo.settings",
+        "description": "Codedady_Demo.settings",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    # project apps - start",
+        "detail": "Codedady_Demo.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "Codedady_Demo.settings",
+        "description": "Codedady_Demo.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    # project apps - start\n    'simplecrud',\n    'studentsapp',",
+        "detail": "Codedady_Demo.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "Codedady_Demo.settings",
+        "description": "Codedady_Demo.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nROOT_URLCONF = 'Codedady_Demo.urls'",
+        "detail": "Codedady_Demo.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "Codedady_Demo.settings",
+        "description": "Codedady_Demo.settings",
+        "peekOfCode": "ROOT_URLCONF = 'Codedady_Demo.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "detail": "Codedady_Demo.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "Codedady_Demo.settings",
+        "description": "Codedady_Demo.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "detail": "Codedady_Demo.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "Codedady_Demo.settings",
+        "description": "Codedady_Demo.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'Codedady_Demo.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation",
+        "detail": "Codedady_Demo.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "Codedady_Demo.settings",
+        "description": "Codedady_Demo.settings",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "detail": "Codedady_Demo.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "Codedady_Demo.settings",
+        "description": "Codedady_Demo.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "Codedady_Demo.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "Codedady_Demo.settings",
+        "description": "Codedady_Demo.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = '/static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field",
+        "detail": "Codedady_Demo.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "Codedady_Demo.settings",
+        "description": "Codedady_Demo.settings",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = '/static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "Codedady_Demo.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "Codedady_Demo.settings",
+        "description": "Codedady_Demo.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = '/static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "Codedady_Demo.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_L10N",
+        "kind": 5,
+        "importPath": "Codedady_Demo.settings",
+        "description": "Codedady_Demo.settings",
+        "peekOfCode": "USE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = '/static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "Codedady_Demo.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "Codedady_Demo.settings",
+        "description": "Codedady_Demo.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = '/static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "Codedady_Demo.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "Codedady_Demo.settings",
+        "description": "Codedady_Demo.settings",
+        "peekOfCode": "STATIC_URL = '/static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "Codedady_Demo.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "Codedady_Demo.settings",
+        "description": "Codedady_Demo.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "Codedady_Demo.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "Codedady_Demo.urls",
+        "description": "Codedady_Demo.urls",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('products/',ProductAPI.as_view()),\n    path('students/',StudentAPI.as_view()),\n    path('subjects/',SubjectAPI.as_view()),\n]",
+        "detail": "Codedady_Demo.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "Codedady_Demo.wsgi",
+        "description": "Codedady_Demo.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "Codedady_Demo.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "simplecrud.migrations.0001_initial",
+        "description": "simplecrud.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='ProductsModel',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('name', models.CharField(max_length=50)),",
+        "detail": "simplecrud.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "SimplecrudConfig",
+        "kind": 6,
+        "importPath": "simplecrud.apps",
+        "description": "simplecrud.apps",
+        "peekOfCode": "class SimplecrudConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'simplecrud'",
+        "detail": "simplecrud.apps",
+        "documentation": {}
+    },
+    {
+        "label": "ProductsModel",
+        "kind": 6,
+        "importPath": "simplecrud.models",
+        "description": "simplecrud.models",
+        "peekOfCode": "class ProductsModel(models.Model):\n    name = models.CharField(max_length=50,null=False,blank=False)\n    price = models.FloatField(default=0.0)\n    description = models.TextField()",
+        "detail": "simplecrud.models",
+        "documentation": {}
+    },
+    {
+        "label": "ProductAPI",
+        "kind": 6,
+        "importPath": "simplecrud.views",
+        "description": "simplecrud.views",
+        "peekOfCode": "class ProductAPI(ListAPIView):\n    def get(self,request):\n        try:\n            # name = self.request.GET.get(\"name\",\"default_name\")\n            # # name = self.request.GET['name']\n            id = self.request.GET.get(\"id\",\"\")\n            name = self.request.GET.get(\"name\",\"\")\n            p_qs = ProductsModel.objects.all()\n            if id: p_qs = p_qs.filter(id=id)\n            if name: p_qs = p_qs.filter(name__icontains=name)",
+        "detail": "simplecrud.views",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "studentsapp.migrations.0001_initial",
+        "description": "studentsapp.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='StudentModel',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('name', models.CharField(max_length=20)),",
+        "detail": "studentsapp.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "studentsapp.migrations.0002_rename_idd_subjectmodel_stu_id",
+        "description": "studentsapp.migrations.0002_rename_idd_subjectmodel_stu_id",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('studentsapp', '0001_initial'),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name='subjectmodel',\n            old_name='idd',\n            new_name='stu_id',\n        ),",
+        "detail": "studentsapp.migrations.0002_rename_idd_subjectmodel_stu_id",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "studentsapp.migrations.0003_auto_20220304_1515",
+        "description": "studentsapp.migrations.0003_auto_20220304_1515",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('studentsapp', '0002_rename_idd_subjectmodel_stu_id'),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name='subjectmodel',\n            old_name='arabic',\n            new_name='mark',\n        ),",
+        "detail": "studentsapp.migrations.0003_auto_20220304_1515",
+        "documentation": {}
+    },
+    {
+        "label": "StudentsappConfig",
+        "kind": 6,
+        "importPath": "studentsapp.apps",
+        "description": "studentsapp.apps",
+        "peekOfCode": "class StudentsappConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'studentsapp'",
+        "detail": "studentsapp.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Checking",
+        "kind": 2,
+        "importPath": "studentsapp.checking",
+        "description": "studentsapp.checking",
+        "peekOfCode": "def Checking(data,    mandatory ):\n    not_present = []\n    for x in mandatory:\n        if x not in data:\n            not_present.append(x)\n            return (f\"{x} Is Not Presnet\")\n        else:\n            if data[x] == \"\":\n                not_present.append(x)\n                return (f\"{x} Cannot Use as null\" )",
+        "detail": "studentsapp.checking",
+        "documentation": {}
+    },
+    {
+        "label": "StudentModel",
+        "kind": 6,
+        "importPath": "studentsapp.models",
+        "description": "studentsapp.models",
+        "peekOfCode": "class StudentModel(models.Model):\n    name=models.CharField(max_length=20,null=False,blank=False)\nclass SubjectModel(models.Model):\n    stu_id=models.IntegerField(null=False,blank=False)\n    subject=models.CharField(max_length=20,null=False,blank=False)\n    mark=models.FloatField(default=0.0)\n    # english=models.FloatField(default=0.0)\n    # maths=models.FloatField(default=0.0)\n    # physics=models.FloatField(default=0.0)\n    # chemistry=models.FloatField(default=0.0)",
+        "detail": "studentsapp.models",
+        "documentation": {}
+    },
+    {
+        "label": "SubjectModel",
+        "kind": 6,
+        "importPath": "studentsapp.models",
+        "description": "studentsapp.models",
+        "peekOfCode": "class SubjectModel(models.Model):\n    stu_id=models.IntegerField(null=False,blank=False)\n    subject=models.CharField(max_length=20,null=False,blank=False)\n    mark=models.FloatField(default=0.0)\n    # english=models.FloatField(default=0.0)\n    # maths=models.FloatField(default=0.0)\n    # physics=models.FloatField(default=0.0)\n    # chemistry=models.FloatField(default=0.0)\n    # biology=models.FloatField(default=0.0)\n    # arabic=models.FloatField(default=0.0)",
+        "detail": "studentsapp.models",
+        "documentation": {}
+    },
+    {
+        "label": "StudentAPI",
+        "kind": 6,
+        "importPath": "studentsapp.views",
+        "description": "studentsapp.views",
+        "peekOfCode": "class StudentAPI(ListAPIView):\n    def post(self,request):\n        mandatory=['name']\n        data=Checking(self.request.data,mandatory)\n        if data==True:  \n            try:  \n                name=self.request.POST.get('name',\"default\")\n                # std_obj=StudentModel.objects.all()\n                # if name in std_obj:\n                #     return Response({",
+        "detail": "studentsapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "SubjectAPI",
+        "kind": 6,
+        "importPath": "studentsapp.views",
+        "description": "studentsapp.views",
+        "peekOfCode": "class SubjectAPI(ListAPIView):\n    def post(self,request):\n        mandatory=['id','subject','mark']\n        data=Checking(self.request.data,mandatory)\n        if data==True:\n            try:\n                stu_id=self.request.POST.get('id',0)\n                subject=self.request.POST.get('subject',\"default\")\n                mark=self.request.POST.get('mark',0.0)\n                sub_obj=SubjectModel.objects.filter(stu_id=stu_id)",
+        "detail": "studentsapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "manage",
+        "description": "manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Codedady_Demo.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "manage",
+        "documentation": {}
+    }
+]
