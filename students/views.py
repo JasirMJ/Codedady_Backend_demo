@@ -6,45 +6,100 @@ from .Checking_Fun import Checking
 
 class StudentAPI(ListAPIView):
 
-    def post(self,request):
+    # def post(self,request):
 
-        st_id = self.request.POST.get("id","")
-        name = self.request.POST.get("name","")
-        phone = self.request.POST.get("phone","")
+    #     st_id = self.request.POST.get("id","")
+    #     name = self.request.POST.get("name","")
+    #     phone = self.request.POST.get("phone","")
         
-        physics = self.request.POST.get("physics",0)
-        chemistry = self.request.POST.get("chemistry",0)
-        Maths = self.request.POST.get("Maths",0)
-        Botany = self.request.POST.get("Botany",0)
-        Zoology = self.request.POST.get("Zoology",0)
-        English = self.request.POST.get("English",0)
-        Semester = self.request.POST.get("semester","")
+    #     physics = self.request.POST.get("physics",0)
+    #     chemistry = self.request.POST.get("chemistry",0)
+    #     Maths = self.request.POST.get("Maths",0)
+    #     Botany = self.request.POST.get("Botany",0)
+    #     Zoology = self.request.POST.get("Zoology",0)
+    #     English = self.request.POST.get("English",0)
+    #     Semester = self.request.POST.get("semester","")
 
-        Total = int(physics) + int(chemistry) + int(Maths) + int(Botany) + int(Zoology) + int(English)
+    #     Total = int(physics) + int(chemistry) + int(Maths) + int(Botany) + int(Zoology) + int(English)
    
-        if st_id == "":
-            if name == "":
-                return Response({
-                    "status" : False,
-                    "Message" : "Please Fill your Name"
-                })
-            else:
-                st_obj = student.objects.create(name=name,phone=phone)
+    #     if st_id == "":
+    #         if name == "":
+    #             return Response({
+    #                 "status" : False,
+    #                 "Message" : "Please Fill your Name"
+    #             })
+    #         else:
+    #             st_obj = student.objects.create(name=name,phone=phone)
 
+    #             mark_obj = Marks.objects.create(student_id = st_obj.id,physics = physics,chemistry=chemistry,Maths=Maths,Botany=Botany,Zoology=Zoology,English=English,Total=Total)
+    #             return Response({
+    #                 "status" : True,
+    #                 "Message" : "Succesfully Created User"
+    #             })
+    #     else:
+           
+    #         if Semester == "":
+
+    #             return Response({
+    #                 "status" : False,
+    #                 "Message" : "Provide A Valid Semester"
+    #             })
+
+    #         else:
+    #             sem = []
+    #             stdts = []
+    #             stids=student.objects.filter(id = st_id)
+    #             for x in stids:
+    #                 stdts.append(x.id)
+    #             datas = Marks.objects.filter(student_id = st_id)
+    #             for x in datas:
+    #                 sem.append(x.Semester)
+
+    #             if len(stdts) == 0:
+    #                 return Response({
+    #                     "status" : False,
+    #                     "Message" : "The Student ID Does Not Exist"
+    #                 })
+
+    #             elif Semester in sem:
+    #                 return Response({
+    #                     "Status" : False,
+    #                     "Message" : "This Semester Alrady Added"
+    #                 })
+               
+    #             else:
+    #                 mark_obj = Marks.objects.create(student_id = st_id,physics = physics,chemistry=chemistry,Maths=Maths,Botany=Botany,Zoology=Zoology,English=English,Total=Total,Semester=Semester)
+    #                 return Response({
+    #                     "status" : True,
+    #                     "Message" : "Succesfully Created Semester Mark"
+    #                 })
+
+    def post(self,request):
+        mandatory = ['name','physics','chemistry','Maths','Botany','Zoology','English','semester']
+        data = Checking(self.request.data,mandatory)
+        
+        if data == True:
+
+            st_id = self.request.POST.get("id","")
+            name = self.request.POST.get("name","")
+            phone = self.request.POST.get("phone","")
+            
+            physics = self.request.POST.get("physics",0)
+            chemistry = self.request.POST.get("chemistry",0)
+            Maths = self.request.POST.get("Maths",0)
+            Botany = self.request.POST.get("Botany",0)
+            Zoology = self.request.POST.get("Zoology",0)
+            English = self.request.POST.get("English",0)
+            Semester = self.request.POST.get("semester","")
+            Total = int(physics) + int(chemistry) + int(Maths) + int(Botany) + int(Zoology) + int(English)
+            if st_id == "":
+
+                st_obj = student.objects.create(name=name,phone=phone)
                 mark_obj = Marks.objects.create(student_id = st_obj.id,physics = physics,chemistry=chemistry,Maths=Maths,Botany=Botany,Zoology=Zoology,English=English,Total=Total)
                 return Response({
                     "status" : True,
                     "Message" : "Succesfully Created User"
                 })
-        else:
-           
-            if Semester == "":
-
-                return Response({
-                    "status" : False,
-                    "Message" : "Provide A Valid Semester"
-                })
-
             else:
                 sem = []
                 stdts = []
@@ -73,6 +128,11 @@ class StudentAPI(ListAPIView):
                         "status" : True,
                         "Message" : "Succesfully Created Semester Mark"
                     })
+        else:
+            return Response({
+                "Status" : False,
+                "Message" : data
+            })
 
     
     def get(self,request):
@@ -179,7 +239,7 @@ class StudentAPI(ListAPIView):
         datas = Marks.objects.filter(student_id = id).filter(Semester=Semester)
         for x in datas:
             sem.append(x.Semester)
-                  
+
         if id == "" or name == "" or phone == "" or physics == "" or chemistry == "" or Maths == "" or Botany == "" or Zoology == "" or English == "" or Semester == "":
             return Response({
                 "status" : False,

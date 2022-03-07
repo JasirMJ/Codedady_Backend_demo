@@ -1,23 +1,57 @@
 from rest_framework.response import Response
 from .models import *
-def Checking(data):
-    
-    try:
-        st_id = data["id"]
-        name = data["name"]
-        phone = data["phone"]        
-        physics = data["physics"]
-        chemistry = data["chemistry"]
-        Maths = data["Maths"]
-        Botany = data["Botany"]
-        Zoology = data["Zoology"]
-        English = data["English"]
-        Semester = data["semester"]
 
+def Checking(data,mandatory):
+
+
+    # mandatory = ['name','phone','semester']  
+    not_present = []
+    for x in mandatory:
+        if x not in data:
+            not_present.append(x)
+            return (f"{x} Is Not Presnet")
+        else:
+            if data[x] == "":
+                not_present.append(x)
+                return (f"{x} Cannot Use as null" )
+            else:
+                pass
+
+    if len(not_present) == 0:
         return True
+    else:
+        pass
+        
+        # if x in data:
+        #     print(f"{data['x']} Present")
+        # else:
+        #     print(f"{data['x']} Is not present")
 
-    except Exception as e:       
-        return e
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # if "name" in data:
+    #     print("data is here")
+    #     return data["name"]
+    # else:
+    #     print("no data")
+    #     return "no data"
+   
+    # array = ['name' , 'phone' , 'physics']
+    # for x in array:
+    #     if data['x']=="":
+    #         print(f"{data['x']} can not be empty")
     
+   
 
