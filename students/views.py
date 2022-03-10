@@ -217,64 +217,125 @@ class StudentAPI(ListAPIView):
             })
     
     def put(self,request):
+        mandatory = ['id','name','physics','chemistry','Maths','Botany','Zoology','English','semester']
+        data = Checking(self.request.data,mandatory)
+        if data == True:
+            id = self.request.POST.get("id","")
+            Semester =  self.request.POST.get("semester","")
+
+            name = self.request.POST.get("name","")
+            phone = self.request.POST.get("phone","")
+            
+            physics = self.request.POST.get("physics","")
+            chemistry = self.request.POST.get("chemistry","")
+            Maths = self.request.POST.get("Maths","")
+            Botany = self.request.POST.get("Botany","")
+            Zoology = self.request.POST.get("Zoology","")
+            English = self.request.POST.get("English","")
+           
+            sem = []
+            stdts = []
+            stids=student.objects.filter(id = id)
+            for x in stids:
+                stdts.append(x.id)
+            datas = Marks.objects.filter(student_id = id).filter(Semester=Semester)
+            for x in datas:
+                sem.append(x.Semester)
+
+            if len(stdts) == 0 :
+                return Response({
+                    "Status" : False,
+                    "Message" : "Student Does Not Exist"
+                })
+            elif len(sem) == 0:
+                return Response({
+                    "Status" : False,
+                    "Message" : "Semester Is Not Present"
+                })
+            else:
+                Total = int(physics) + int(chemistry) + int(Maths) + int(Botany) + int(Zoology) + int(English)
+                st_obj = student.objects.get(id = id)
+                mark_obj = Marks.objects.filter(student_id = id).get(Semester=Semester)
+                st_obj.name  = name
+                st_obj.phone = phone
+                mark_obj.phyiscs = physics
+                mark_obj.chemistry = chemistry
+                mark_obj.Maths = Maths
+                mark_obj.Botany = Botany
+                mark_obj.Zoology = Zoology
+                mark_obj.English = English
+                mark_obj.English = Total
+                mark_obj.save()
+                st_obj.save()
+
+                return Response({
+                    "status" : True,
+                    "Message" : "Data Saved Succesfully"
+                })
         
-        id = self.request.POST.get("id","")
-        Semester =  self.request.POST.get("semester","")
-
-        name = self.request.POST.get("name","")
-        phone = self.request.POST.get("phone","")
-        
-        physics = self.request.POST.get("physics","")
-        chemistry = self.request.POST.get("chemistry","")
-        Maths = self.request.POST.get("Maths","")
-        Botany = self.request.POST.get("Botany","")
-        Zoology = self.request.POST.get("Zoology","")
-        English = self.request.POST.get("English","")
-
-        sem = []
-        stdts = []
-        stids=student.objects.filter(id = id)
-        for x in stids:
-            stdts.append(x.id)
-        datas = Marks.objects.filter(student_id = id).filter(Semester=Semester)
-        for x in datas:
-            sem.append(x.Semester)
-
-        if id == "" or name == "" or phone == "" or physics == "" or chemistry == "" or Maths == "" or Botany == "" or Zoology == "" or English == "" or Semester == "":
-            return Response({
-                "status" : False,
-                "Message" :  "PLease Fill Your All Field"
-            })
-        elif len(stdts) == 0:
-            return Response({
-                "Status" : False,
-                "Message" : "The Student ID is Does Not Match"
-            })
-        elif len(sem) == 0:
-            return Response({
-                "Status" : False,
-                "Message" : "The Semester Does Not Exist"
-            })
         else:
-            Total = int(physics) + int(chemistry) + int(Maths) + int(Botany) + int(Zoology) + int(English)
-            st_obj = student.objects.get(id = id)
-            mark_obj = Marks.objects.filter(student_id = id).get(Semester=Semester)
-            st_obj.name  = name
-            st_obj.phone = phone
-            mark_obj.phyiscs = physics
-            mark_obj.chemistry = chemistry
-            mark_obj.Maths = Maths
-            mark_obj.Botany = Botany
-            mark_obj.Zoology = Zoology
-            mark_obj.English = English
-            mark_obj.English = Total
-            mark_obj.save()
-            st_obj.save()
-
             return Response({
-                "status" : True,
-                "Message" : "Data Saved Succesfully"
+                "Status" : False,
+                "Message" : data
             })
+
+        # id = self.request.POST.get("id","")
+        # Semester =  self.request.POST.get("semester","")
+
+        # name = self.request.POST.get("name","")
+        # phone = self.request.POST.get("phone","")
+        
+        # physics = self.request.POST.get("physics","")
+        # chemistry = self.request.POST.get("chemistry","")
+        # Maths = self.request.POST.get("Maths","")
+        # Botany = self.request.POST.get("Botany","")
+        # Zoology = self.request.POST.get("Zoology","")
+        # English = self.request.POST.get("English","")
+
+        # sem = []
+        # stdts = []
+        # stids=student.objects.filter(id = id)
+        # for x in stids:
+        #     stdts.append(x.id)
+        # datas = Marks.objects.filter(student_id = id).filter(Semester=Semester)
+        # for x in datas:
+        #     sem.append(x.Semester)
+
+        # if id == "" or name == "" or phone == "" or physics == "" or chemistry == "" or Maths == "" or Botany == "" or Zoology == "" or English == "" or Semester == "":
+        #     return Response({
+        #         "status" : False,
+        #         "Message" :  "PLease Fill Your All Field"
+        #     })
+        # elif len(stdts) == 0:
+        #     return Response({
+        #         "Status" : False,
+        #         "Message" : "The Student ID is Does Not Match"
+        #     })
+        # elif len(sem) == 0:
+        #     return Response({
+        #         "Status" : False,
+        #         "Message" : "The Semester Does Not Exist"
+        #     })
+        # else:
+        #     Total = int(physics) + int(chemistry) + int(Maths) + int(Botany) + int(Zoology) + int(English)
+        #     st_obj = student.objects.get(id = id)
+        #     mark_obj = Marks.objects.filter(student_id = id).get(Semester=Semester)
+        #     st_obj.name  = name
+        #     st_obj.phone = phone
+        #     mark_obj.phyiscs = physics
+        #     mark_obj.chemistry = chemistry
+        #     mark_obj.Maths = Maths
+        #     mark_obj.Botany = Botany
+        #     mark_obj.Zoology = Zoology
+        #     mark_obj.English = English
+        #     mark_obj.English = Total
+        #     mark_obj.save()
+        #     st_obj.save()
+
+        #     return Response({
+        #         "status" : True,
+        #         "Message" : "Data Saved Succesfully"
+        #     })
        
     def delete(self,request):
 

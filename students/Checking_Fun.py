@@ -21,26 +21,7 @@ def Checking(data,mandatory):
         return True
     else:
         pass
-        
-        # if x in data:
-        #     print(f"{data['x']} Present")
-        # else:
-        #     print(f"{data['x']} Is not present")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+     
     # if "name" in data:
     #     print("data is here")
     #     return data["name"]
