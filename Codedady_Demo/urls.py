@@ -17,8 +17,13 @@ from django.contrib import admin
 from django.urls import path
 
 from simplecrud.views import ProductAPI
+# from simplecrudserializer.views import ProductSAPI
+
+from django.conf.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('products/',ProductAPI.as_view())
+    path('products/',ProductAPI.as_view()),
+    path('ser-products/',include('simplecrudserializer.urls')),
+    path('rel-products/',include('relations.urls')),
 ]

@@ -40,6 +40,8 @@ INSTALLED_APPS = [
 
     # project apps - start
     'simplecrud',
+
+    'relations',
     # project apps - end
 
 
