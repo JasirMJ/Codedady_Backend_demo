@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'students',
     'studentwithrelation',
     'simplecrudserializer',
+    'products',
    
     # project apps - end
 

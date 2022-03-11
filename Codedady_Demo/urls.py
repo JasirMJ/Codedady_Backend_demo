@@ -30,7 +30,8 @@ urlpatterns = [
     path('products/',ProductAPI.as_view()),
     path('students/',StudentAPI.as_view()),
     path('studentsnew/',StudentAPINew.as_view()),
-    path('studentsser/',include('simplecrudserializer.urls'))
+    path('studentsser/',include('simplecrudserializer.urls')),
+    path('relations/',include('products.urls')),
 
 
 ]
