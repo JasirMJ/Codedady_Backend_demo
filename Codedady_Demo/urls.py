@@ -26,4 +26,5 @@ urlpatterns = [
     path('products/',ProductAPI.as_view()),
     path('ser-products/',include('simplecrudserializer.urls')),
     path('rel-products/',include('relations.urls')),
+    path('users/',include('userApp.urls')),
 ]
