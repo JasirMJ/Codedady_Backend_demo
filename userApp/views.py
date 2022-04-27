@@ -72,6 +72,7 @@ class WhoAmI(ListAPIView):
     permission_classes = (IsAuthenticatedOrReadOnly,)
 
     def get(self,request):
+
         return Response({
             "Status":1,
             "Data":self.request.user.username

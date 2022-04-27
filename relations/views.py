@@ -1,5 +1,6 @@
 from django.db.models import Q
 from django.shortcuts import render
+from django.db import DatabaseError, transaction
 
 # Create your views here.
 from rest_framework.generics import ListAPIView
@@ -180,45 +181,64 @@ class ProductVariantAPI(ListAPIView):
 
         qs = ProductVariant.objects.all()
 
-        print(qs[0].product.name)
+        # print(qs[0].product.name)
 
         return qs
 
-
     def post(self,request):
-        print("Request Data : ",self.request.data)
-        try:
-            id = self.request.POST.get("id", "")
+        msg="worked"
 
-            product = self.request.POST["product"]
-        except Exception as e :
-            return Response({STATUS:1,MESSAGE:str(e)})
+        p_obj = ProductVariant()
 
-        p_qs = ProductsRelationModel.objects.filter(id=product)
-        if len(p_qs) ==0:return Response({STATUS:0,MESSAGE:"No record found for product with privuded id"})
-        # validate for product
+        with transaction.atomic():
 
-
-        if id:
-            qs_to_modify = ProductVariant.objects.filter(id=id)
-            if qs_to_modify.count():
-                obj_to_modify = qs_to_modify.first()
-                p_obj = ProductVariantSerializers(obj_to_modify, data=self.request.data, partial=True)
-                msg = "Updated Successfully"
-            else:
-                return Response({ "Status":False, "Message":"No record found with the id" })
-        else:
-            p_obj = ProductVariantSerializers(data=self.request.data, partial=True)
-            msg = "Saved Successfully"
-
-        p_obj.is_valid(raise_exception=True)
-        obj = p_obj.save(product=p_qs[0])
-        saved_data = ProductVariantSerializers(obj).data
-
+            print("transaction.atomic worked")
+            p_obj.name = "asdasdasd sadasdasd asdasdkasmdlasnjd asjkdnl jaksnd jlasdk nalskn ldnasdasdasdasd sadasdasd asdasdkasmdlasnjd asjkdnl jaksnd jlasdk nalskn ldnasdasdasdasd sadasdasd asdasdkasmdlasnjd asjkdnl jaksnd jlasdk nalskn ldnasdasdasdasd sadasdasd asdasdkasmdlasnjd asjkdnl jaksnd jlasdk nalskn ldnasdasdasdasd sadasdasd asdasdkasmdlasnjd asjkdnl jaksnd jlasdk nalskn ldnasdasdasdasd sadasdasd asdasdkasmdlasnjd asjkdnl jaksnd jlasdk nalskn ldnasdasdasdasd sadasdasd asdasdkasmdlasnjd asjkdnl jaksnd jlasdk nalskn ldnasdasdasdasd sadasdasd asdasdkasmdlasnjd asjkdnl jaksnd jlasdk nalskn ldnasdasdasdasd sadasdasd asdasdkasmdlasnjd asjkdnl jaksnd jlasdk nalskn ldnasd"
+            p_obj.price = "asd"
+            p_obj.product = ProductsRelationModel.objects.all[0]
+            p_obj.save()
 
         return Response({
             "Status":True,
             "Message":msg,
             "Data":self.request.data,
-            "saved":saved_data,
         })
+
+
+    # def post(self,request):
+    #     print("Request Data : ",self.request.data)
+    #     try:
+    #         id = self.request.POST.get("id", "")
+    #
+    #         product = self.request.POST["product"]
+    #     except Exception as e :
+    #         return Response({STATUS:1,MESSAGE:str(e)})
+    #
+    #     p_qs = ProductsRelationModel.objects.filter(id=product)
+    #     if len(p_qs) ==0:return Response({STATUS:0,MESSAGE:"No record found for product with privuded id"})
+    #     # validate for product
+    #
+    #
+    #     if id:
+    #         qs_to_modify = ProductVariant.objects.filter(id=id)
+    #         if qs_to_modify.count():
+    #             obj_to_modify = qs_to_modify.first()
+    #             p_obj = ProductVariantSerializers(obj_to_modify, data=self.request.data, partial=True)
+    #             msg = "Updated Successfully"
+    #         else:
+    #             return Response({ "Status":False, "Message":"No record found with the id" })
+    #     else:
+    #         p_obj = ProductVariantSerializers(data=self.request.data, partial=True)
+    #         msg = "Saved Successfully"
+    #
+    #     p_obj.is_valid(raise_exception=True)
+    #     obj = p_obj.save(product=p_qs[0])
+    #     saved_data = ProductVariantSerializers(obj).data
+    #
+    #
+    #     return Response({
+    #         "Status":True,
+    #         "Message":msg,
+    #         "Data":self.request.data,
+    #         "saved":saved_data,
+    #     })

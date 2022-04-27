@@ -23,7 +23,7 @@ from django.conf.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('products/',ProductAPI.as_view()),
+    path('products/',include("relations.urls")),
     path('ser-products/',include('simplecrudserializer.urls')),
     path('rel-products/',include('relations.urls')),
     path('users/',include('userApp.urls')),
